@@ -31,7 +31,17 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Uses rspec for testing
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
 end
+
+group :test do
+  # Integration testing tool for rack based web applications. It simulates how a user would interact with a website
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
+end
+
+
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
